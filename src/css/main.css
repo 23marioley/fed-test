@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+#q4Wrapper {
+  background-color: #2A3035;
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+#q4Wrapper h1, #q4Wrapper h3 {
+  margin: 0;
+}
+#q4Wrapper h1 {
+  font-size: 48px;
+}
+#q4Wrapper h3 {
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+#q4Wrapper header, #q4Wrapper footer {
+  background-color: #22272B;
+}
+#q4Wrapper header {
+  padding: 20px;
+}
+#q4Wrapper footer {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+#q4Wrapper article {
+  text-align: center;
+}
+#q4Wrapper article img {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+#q4Wrapper a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease;
+}
+#q4Wrapper a:hover {
+  transform: scale(1.05);
+}
+#q4Wrapper a span {
+  opacity: 0.5;
+}
+
+.layout_inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+.layout_header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Begin styling the report items here! */
+.reports {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: 30% 30% 30%; */
+  grid-gap: 30px;
+}
+
+@media(max-width: 768px) {
+  .reports {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*I wasn't sure if adding a media query for the viewport's width when 425px or below,
+in the instructions it only says 768px or below, but I think this media query is necessary*/
+@media(max-width: 426px) {
+  /*OPTION 1: Decrease the images' width and the font-size of h3 tags*/
+  #q4Wrapper article img {
+    width: 120px;
+  }
+  #q4Wrapper h3 {
+    font-size: 9px;
+    line-height: 15px;
+  }
+  /*OPTION 2: Switch to a one column grid*/
+  /* .reports {
+    grid-template-columns: 1fr;
+  } */
+}
+/*Another option could be to make the articles (reports_item) smaller */
